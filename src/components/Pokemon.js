@@ -7,7 +7,7 @@ export default class Pokemon extends React.Component {
     }
   
     componentDidMount() {
-      axios.get(`https://pokeapi.co/api/v2/pokemon`)
+      axios.get(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=1000`)
         .then(res => {
           const pokemons = res.data.results;
           this.setState({ pokemons });
